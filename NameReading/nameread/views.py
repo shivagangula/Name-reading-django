@@ -1,0 +1,19 @@
+from django.shortcuts import render
+import random
+
+# Create your views here.
+def index(request):
+    list1 = ["A","B","C","D","E"]
+    list2 =["F","G","H","I","J"]
+    list3 =["P","Q","R","S","T"]
+    list4 =["U","V","W","X","Y"]
+    list5 =["Z"," "," "," "," "]
+    sendble_data = {
+             'title':string,
+             'list1':list1,
+             'list2':list2,
+             'list3':list3,
+             'list4':list4,
+             'list5':list5
+             }
+    return render(request, 'nameread/index.html', sendble_data)

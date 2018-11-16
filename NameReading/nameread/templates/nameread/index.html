@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Name Reader Game</title>
+       {% load static %}
+        <script src="{% static 'js/step1.js' %}"></script>
+        <script src="{% static 'js/circle.js' %}"></script>
+         <script src="{% static 'js/step2.js' %}"></script>
+        <script src="{% static 'js/getname.js' %}"></script>
+        <script src="{% static 'js/userarray.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/steps_card.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/background.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/sidemenu.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/animations.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/fadeanimation.css' %}"/>
+
+    </head>
+
+<body onload="show()" >
+<div class="header">{{ title }}</div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+<div id="sidebarMenu">
+           <ul class="sidebarMenuInner">
+                <li>Shiva gangula <span>Developer & Designer</span></li>
+                <li><a href="instructions.html" target="_blank">Instructions</a></li>
+                <li><a href="https://www.instagram.com/shiva_gangula/" target="_blank"> my Instagram</a></li>
+                <li><a href="https://www.facebook.com/shivagangula44" target="_blank">my Facebook</a></li>
+                <li><a href="https://www.linkedin.com/in/shiva-krishna-prasad-gangula-a77b43122/" target="_blank">my Linkedin</a></li>
+                 <li><a href="" >Restart app</a></li>
+             </ul>
+        </div>
+
+<div  id="step_1">
+          <div  id="line_block1">
+                   <button  value="1" type="button" onclick="selectting_heri_line_buttion1()" id="line_btn1"><u><span id="alpha1" ></span></u>
+                    </button>
+            </div>
+            <div id="line_block2">
+                <button value="2" onclick="selectting_heri_line_buttion2()" id="line_btn2"><u><span id="alpha2" ></span></u>
+                   </button>
+            </div>
+            <div id="line_block3">
+                    <button value="3" onclick="selectting_heri_line_buttion3()"  id="line_btn3"><u><span id="alpha3"></span></u>
+                    </button>
+            </div>
+            <div id="line_block4">
+                    <button value="4" onclick="selectting_heri_line_buttion4()"  id="line_btn4"><u><span id="alpha4"></span></u>
+                    </button>
+            </div>
+            <div id="line_block5">
+                    <button value="5" onclick="selectting_heri_line_buttion5()" id="line_btn5"><u><span id="alpha5"></span></u>
+                    </button>
+            </div>
+            <div id="line_block6">
+                     <button value="6" onclick="selectting_heri_line_buttion6()" id="line_btn6"><u><span id="alpha6"></span></u>
+                     </button>
+            </div>
+</div>
+
+
+
+
+
+<div id="step_2">
+            <div  id="line_block11">
+                      <button  value="11" type="button" onclick="step2_btn_1()" id="line_btn11"><p id="alpha11"></p>
+                      </button>
+             </div>
+             <div id="line_block22">
+                     <button value="22" onclick="step2_btn_2()"id="line_btn22">
+                         <p id="alpha22" ></p>
+                     </button>
+            </div>
+            <div id="line_block33">
+                    <button value="33" onclick="step2_btn_3()"  id="line_btn33">
+                         <p id="alpha33"></p>
+                    </button>
+            </div>
+            <div id="line_block44">
+                    <button value="44" onclick="step2_btn_4()"  id="line_btn44">
+                          <p id="alpha44"></p>
+                    </button>
+            </div>
+            <div id="line_block55">
+                     <button value="55" onclick="step2_btn_5()" id="line_btn55">
+                        <p id="alpha55"></p>
+                     </button>
+             </div>
+
+</div>
+
+<input type="button" value=" Next step" onclick="next_btn()" id="next_btn" />
+<input type="button" value="Get Name" onclick="final_btn()" id="final_btn" />
+
+<div class="w3-container w3-center w3-animate-zoom"><p id = "final_r"></p></div>
+
+</body>
+</html>
