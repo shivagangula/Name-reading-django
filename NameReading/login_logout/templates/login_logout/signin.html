@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="{% url 'read' %}" method="POST">{% csrf_token %}
+    username:<input type="text" name="" value="username"><br>
+    password:<input type="password" name="" value="password"><br>
+    <input type="submit" name="" value="signin">
+    </form>
+    <a href="{% url 'signup' %}">sinup here</a>
+  </body>
+</html>
