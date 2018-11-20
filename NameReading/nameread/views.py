@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import random
-
+from .md5_alg import computeMD5hash
 # Create your views here.
 def index(request):
     username = request.GET['username']

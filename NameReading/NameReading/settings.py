@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'login_logout.apps.LoginLogoutConfig',
+    'user.apps.UserConfig',
     'nameread.apps.NamereadConfig',
     'django.contrib.admin',
     'django.contrib.auth',

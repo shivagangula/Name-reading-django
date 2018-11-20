@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}"/>
   </head>
   <body>
-    <form class="" action="{% url 'user' %} " method="">{% csrf_token %}
+    <div class="signup_container">
+
+    <form class="" action="{% url 'success' %} " method="">{% csrf_token %}
     username:<input type="text" name="username" value=""><br>
     password:<input type="password" name="password" value=""><br>
     mobile number : <input type="number" name="mobile_number" value=""><br>
     emai id : <input type="email" name="email" value="">
     <input type="submit" name="" value="register">
     </form>
+
+    </div>
+    
     <br>
 
     <a href="{% url 'signin' %}">signin here</a>

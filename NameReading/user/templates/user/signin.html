@@ -5,9 +5,9 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="{% url 'read' %}" method="POST">{% csrf_token %}
-    username:<input type="text" name="" value="username"><br>
-    password:<input type="password" name="" value="password"><br>
+    <form class="" action="{% url 'success' %}" method="">{% csrf_token %}
+    email :<input type="email" name="email" value=""><br>
+    password:<input type="password" name="password" value=""><br>
     <input type="submit" name="" value="signin">
     </form>
     <a href="{% url 'signup' %}">sinup here</a>
