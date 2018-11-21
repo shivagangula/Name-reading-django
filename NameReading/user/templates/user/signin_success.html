@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  {% load static %}
+      <link rel="stylesheet" href="{% static 'signupstyles' %}">
+  </head>
+  <body>
+    <h1>{{ info }}</h1>
+    <a href="{% url 'signin' %}">signin here</a>
+    <a href="{% url 'signup' %}">signup</a>
+  </body>
+</html>

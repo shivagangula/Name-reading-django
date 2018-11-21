@@ -24,8 +24,6 @@ urlpatterns = [
         path('read/', nameread.views.index, name='read'),
         path('signup/', user.views.signup, name='signup'),
         path('', user.views.signin, name='signin'),
-        path('success/', user.views.success, name='success'),
-
-
-
+        path('signup_success/', user.views.signup_success, name='signup_success'),
+        path('signin_success/', user.views.signin_success, name='signin_success'),
 ]
