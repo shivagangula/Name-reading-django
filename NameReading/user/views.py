@@ -1,6 +1,7 @@
 from django.shortcuts import render
+
+from user.Opreations.md5_encript import convertmd5
 from .models import user_singup_model
-from .md5_encript import convertmd5
 from django.db import connection
 
 def user(request):
@@ -39,11 +40,11 @@ def signup_success(request):
                 return render(request, 'user/signup_success.html', send)
 
 def signin_success(request):
-    try:
         email = request.GET['email']
         password = request.GET['password']
         md5_hash = convertmd5(email)
         cursor = connection.cursor()
+        list1 = [email,password]
         query = """
                 SELECT md5_hash FROM user_user_singup_model
                 WHERE email= '{0}' AND password = '{1}';
@@ -51,12 +52,14 @@ def signin_success(request):
         cursor.execute(query)
         row = cursor.fetchall()
         print(row)
+        if "" in list1:
+            send = {'info': "type correctly"}
+            return render(request, 'user/signin_success.html', send)
+
         if md5_hash in row[0]:
             send = {'info': "user is there"}
             return render(request, 'user/signin_success.html', send)
-    except ValueError:
-        send = {'info': "type correctly"}
-        return render(request, 'user/signin_success.html', send)
-    except:
-        send = {'info': "user is not there"}
-        return render(request, 'user/signin_success.html', send)
+
+        if md5_hash not in row[0]:
+            send = {'info': "user is not there"}
+            return render(request, 'user/signin_success.html', send)
