@@ -9,8 +9,15 @@ body {
   font-size: 14px;
   background-size: 200% 100% !important;
 
-  background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+  background: linear-gradient(45deg, #49D49D 10%, #2948ff 90%);
   height: 100vh;
+}
+
+#info{
+  font-size: 30px;
+  font-family: "Roboto";
+    color: white;
+    text-transform: uppercase;
 }
 
 .user {

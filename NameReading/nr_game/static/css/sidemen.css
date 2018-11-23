@@ -5,7 +5,7 @@
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: #396afc;
+    background: linear-gradient(45deg, #2948ff 10%, #2948ff 90%);
     position: fixed;
     height: 60px!important;
     overflow: hidden;
@@ -14,6 +14,7 @@
     font-family: 'K2D', sans-serif;
     font-size: 35px;
     color: white;
+    border-bottom: 1px solid white;
 }
 .header:hover{
     text-decoration: underline;
@@ -86,7 +87,7 @@ input[type=checkbox] {
     transition: all 0.3s;
     box-sizing: border-box;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     z-index: 99;
     height: 100%;
     width: 100%;

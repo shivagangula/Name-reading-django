@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=K2D');
                    /* step carads     */
 #step_1,#step_2{
-     background: white;
-    margin-top: 85px;
+    background: white;
+    margin-top: 100px;
     margin-left: 150px;
     width: 1000px;
     height: 480px; 
-    float: down;
+    float: bottom;
     border-radius: 10px;
     border: 1px solid black;
 
@@ -24,7 +24,7 @@ u{
 #cir{
     border: 5px solid  #396afc;
     position: relative;
-    align-items: center
+    align-items: center;
     text-align: center;
     width: 70px;
     text-align: center;
