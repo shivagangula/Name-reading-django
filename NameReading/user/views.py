@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from user.Opreations.md5_encript import convertmd5
-from user.Opreations.signin import signin_qurey
+from user.Opreations.signin import SignInQuery
 from user.Opreations.signup import signup_qurey
 from .models import user_singup_model
 from django.db import connection
@@ -36,7 +36,7 @@ def signup_success(request):
 def signin_success(request):
         email = request.GET['email']
         password = request.GET['password']
-        recived_data = signin_qurey(email,password)
+        recived_data = SignInQuery(email, password)
         if recived_data['info'] == 'success':
             send = {'info':'your are successfull logined'}
             return render(request, 'user/signin_success.html',send)

@@ -13,14 +13,27 @@ def signup_qurey(username,password,mobile_number,email):
                        """.format(email, password)
     cursor.execute(query)
     row = cursor.fetchall()
-
+    print(signup_details)
+    strings = signup_details
+    s = [ x for x in strings if x ]
     try:
+       try:
+           #work pending here
         if "" in signup_details:
             return {'info': 'enter all detailes properly'}
+        else:
+         if username == "":
+            return {'info': 'enter username'}
+         if password == "":
+            return {'info': 'enter password'}
+         if email == "":
+            return {'info': 'enter email adress'}
+         if mobile_number == "":
+            return {'info': 'enter password'}
 
-        if md5_hash in row[ 0 ]:
-            return {'info': "user already exist"}
-
+       except:
+           if md5_hash in row[ 0 ]:
+               return {'info': "user already exist"}
     except:
         md5_hash = convertmd5(email)
         user = user_singup_model(
@@ -32,4 +45,6 @@ def signup_qurey(username,password,mobile_number,email):
         )
         user.save()
         return {'info': 'success'}
+    finally:
+        connection.close()
 
