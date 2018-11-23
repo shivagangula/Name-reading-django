@@ -26,9 +26,11 @@ def signup_success(request):
     email = request.GET['email']
 
     recived_data = signup_qurey(username,password,mobile_number,email)
+
     if recived_data['info'] == "success":
       send = {'info':'your registration succesfull'}
-      return render(request, 'user/signup_success.html', send)
+      return render(request, 'user/signin.html', send)
+
     else:
         return render(request, 'user/signup.html', recived_data)
 
@@ -38,7 +40,7 @@ def signin_success(request):
         password = request.GET['password']
         recived_data = SignInQuery(email, password)
         if recived_data['info'] == 'success':
-            send = {'info':'your are successfull logined'}
-            return render(request, 'user/signin_success.html',send)
+            send = {'info':'success'}
+            return render(request, 'nr_game/index.html' ,send)
         else:
             return render(request, 'user/signin.html', recived_data)
