@@ -9,4 +9,5 @@ class user_singup_model(models.Model):
     md5_hash = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
+        return self.username
+

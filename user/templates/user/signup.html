@@ -19,7 +19,7 @@
   <div class="user">
     <header class="user__header">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
-        <h1 class="user__title">{{ info }}</h1>
+        <p id="info">{{ info }} </p>
     </header>
 
     <form class="form" action="{% url 'signup_success' %} " method="">{% csrf_token %}
