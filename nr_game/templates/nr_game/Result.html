@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Name Reader Game</title>
+       {% load static %}
+
+
+        <link rel="stylesheet" href="{% static 'css/animation.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/backgroun.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/fadeanimation.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/sidemen.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/steps_car.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/foote.css' %}"/>
+
+
+
+    </head>
+<body>
+<div class="header"></div>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+<div id="sidebarMenu">
+           <ul class="sidebarMenuInner">
+                <li>Shiva gangula <span>Developer & Designer</span></li>
+               <li><a href="{% url 'profile' %}" target="_blank"> my profile</a></li>
+               <li><a href="instructions.html" target="_blank">Instructions</a></li>
+                <li><a href="https://www.instagram.com/shiva_gangula/" target="_blank"> my Instagram</a></li>
+                <li><a href="https://www.facebook.com/shivagangula44" target="_blank">my Facebook</a></li>
+                <li><a href="https://www.linkedin.com/in/shiva-krishna-prasad-gangula-a77b43122/" target="_blank">my Linkedin</a></li>
+               <li><a href="https://github.com/shivagangula">GitHub</a></li>
+               <li><a href="{% url 'nr_game' %}" >lag out</a></li>
+             </ul>
+        </div>
+
+
+<div class="w3-container w3-center w3-animate-zoom"><p id = "final_r">{{ name }}</p></div>
+<br>
+
+		<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="https://www.instagram.com/shiva_gangula/" target="_blank">Instagram</a>
+					·
+					<a href="https://www.facebook.com/shivagangula44">facebook</a>
+					·
+					<a href="https://www.linkedin.com/in/shiva-krishna-prasad-gangula-a77b43122/" target="_blank">Linkdin</a>
+					·
+					<a href="https://github.com/shivagangula" target="_blank">GitHub</a>
+
+				</p>
+
+				<p>Dev.shiva &copy; 2019</p>
+			</div>
+
+		</footer>
+
+</body>
+</html>

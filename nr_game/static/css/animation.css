@@ -7,10 +7,9 @@
     font-size: 80px;
    font-family: 'Niconne', cursive;
     color: white;
+    margin-bottom: 100px;
 }
-#final_r:hover{
-    font-size: 100px;  
-}
+
 #final_r:first-letter {
     text-transform:capitalize;
 }

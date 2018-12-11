@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 import user.views
 import nr_game.views
+import user_profile.views
 
 
 urlpatterns = [
@@ -26,5 +27,8 @@ urlpatterns = [
         url('^$', user.views.signin, name='signin'),
         url('^signup_success/', user.views.signup_success, name='signup_success'),
         url('^signin_success/', user.views.signin_success, name='signin_success'),
-        url('^nr_game/', nr_game.views.home, name = 'nr_game')
+        url('^nr_game/', nr_game.views.home, name = 'nr_game'),
+        url('^Result/', nr_game.views.resultsend, name = 'result'),
+        url('^profile/', user_profile.views.profile, name='profile')
+
 ]

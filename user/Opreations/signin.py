@@ -1,6 +1,18 @@
 from django.db import connection
 from user.Opreations.md5_encript import convertmd5
 
+md5_for_profile = []
+pk = [ ]
+def pkm(md5):
+    i = md5
+    cursor = connection.cursor()
+    query = """select * from user_user_singup_model 
+                     where md5_hash = "{}";""".format(i)
+    cursor.execute(query)
+    row = cursor.fetchall()
+    user_serial_id = row[ 0 ][ 0 ]
+    pk.append(user_serial_id)
+
 
 def currentUser(email):
     md5_hash = convertmd5(email)
@@ -23,8 +35,8 @@ def SignInQuery(email, password):
                     """.format(email, password)
     cursor.execute(query)
     row = cursor.fetchall()
-    print(row)
     cuser = currentUser(email)
+
     try:
           if email == "":
               return {'info':'enter email adress'}
@@ -33,7 +45,11 @@ def SignInQuery(email, password):
           if "" in list1:
                 return {'info': "type correctly"}
           if md5_hash in row[ 0 ]:
-                return {'info': "success",'username': cuser}
+                md5_for_profile.append(md5_hash)
+                pkm(md5_hash)
+                return {'info': "success", 'username': cuser}
+
 
     except:
           return {'info': "user is not there"}
+

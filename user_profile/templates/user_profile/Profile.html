@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+
+        <th>username</th>
+        <th>email</th>
+        <th>mobile number</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i,j,k in user_detailes %}
+    <tr>
+        <td>{{ i }}</td>
+        <td>{{ k }}</td>
+        <td>{{ j }}</td>
+    </tr>{% endfor %}
+    </tbody>
+</table>
+
+
+
+
+<h1 style="text-align: center;">sarched histroy</h1>
+<div id="table-container">
+<table border="1">
+    <thead>
+    <tr><th>words</th><th>serached by </th></tr>
+    </thead>
+    <tbody>              {% for i,j in strings %}
+
+            <tr>
+                 <td>{{ i }}</td><td>{{ j }}</td>
+
+            </tr>
+  {% endfor %}
+    </tbody>
+</table>
+</div>
+</body>
+</html>

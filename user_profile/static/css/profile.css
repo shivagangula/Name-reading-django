@@ -1,0 +1,15 @@
+table{
+    margin-left:31%;
+    width: 500px;
+    text-align: center;
+    border: solid 2px black;
+}
+#table-container{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+td{
+    background-color: #000055;
+    color: white;
+}

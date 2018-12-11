@@ -9,7 +9,7 @@
         <script src="{% static 'js/user_array.js' %}"></script>
 
 
-        <link rel="stylesheet" href="{% static 'css/animations.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/animation.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/backgroun.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/fadeanimation.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/sidemen.css' %}"/>
@@ -31,7 +31,8 @@
 <div id="sidebarMenu">
            <ul class="sidebarMenuInner">
                 <li>Shiva gangula <span>Developer & Designer</span></li>
-                <li><a href="instructions.html" target="_blank">Instructions</a></li>
+               <li><a href="{% url 'profile' %}" target="_blank"> my profile</a></li>
+               <li><a href="instructions.html" target="_blank">Instructions</a></li>
                 <li><a href="https://www.instagram.com/shiva_gangula/" target="_blank"> my Instagram</a></li>
                 <li><a href="https://www.facebook.com/shivagangula44" target="_blank">my Facebook</a></li>
                 <li><a href="https://www.linkedin.com/in/shiva-krishna-prasad-gangula-a77b43122/" target="_blank">my Linkedin</a></li>
@@ -103,6 +104,11 @@
 <input type="button" value="Get Name" onclick="final_btn()" id="final_btn" />
 
 <div class="w3-container w3-center w3-animate-zoom"><p id = "final_r"></p></div>
+
+
+<form id="myForm" action="{% url 'result' %}" method="">
+  <input type='hidden' id= 'hiddenField' name='final_name' value='' />
+</form>
 <br>
 
 		<footer class="footer-distributed">
