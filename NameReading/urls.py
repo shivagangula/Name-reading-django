@@ -29,6 +29,7 @@ urlpatterns = [
         url('^signin_success/', user.views.signin_success, name='signin_success'),
         url('^nr_game/', nr_game.views.home, name = 'nr_game'),
         url('^Result/', nr_game.views.resultsend, name = 'result'),
-        url('^profile/', user_profile.views.profile, name='profile')
+        url('^profile/', user_profile.views.profile, name='profile'),
+        url('^logout/', nr_game.views.logout, name='logout')
 
 ]

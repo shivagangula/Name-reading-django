@@ -19,7 +19,7 @@ def resultsend(request):
         strings = StringsTable.objects.create(Strings=add,serched_date=timezone.now())
         strings.user.add(user)
         send = {'name':request.GET['final_name']}
-
         return render(request,'nr_game/Result.html',send)
 
-
+def logout(request):
+        return render(request, 'user/signin.html')
